@@ -1,193 +1,109 @@
 # Inbox Triage Assistant
 
-A compact LangChain + LangGraph CLI agent that reads a local inbox, sorts every message by urgency, drafts replies on request, and saves approved responses back to disk.
+A simple CLI inbox assistant built with LangChain and LangGraph while I was learning agentic workflows.
 
-This project is centered on [`agent2.py`]. It behaves like a focused personal assistant for message cleanup:
+This project was my practice after completing the LangChain fundamentals course. The goal was to move beyond just calling an LLM and actually build something that uses tools, memory, and multi-step reasoning more like a real agent.
 
-- It automatically checks the inbox when the script starts.
-- It classifies messages into `URGENT`, `IMPORTANT`, and `ROUTINE`.
-- It asks before drafting replies.
-- It asks again before saving anything.
-- It writes approved drafts to `messages/replies.txt`.
+## What It Does
 
-## Why It’s Cool
+When you run the script, it automatically reads messages from a local text file at [`messages/messages.txt`](/home/diwas/code/lang_chain/lang101/messages/messages.txt) and classifies them into three priorities:
 
-This is a small script, but it demonstrates several solid agent patterns in one place:
+- `URGENT` - needs action today
+- `IMPORTANT` - needs action soon
+- `ROUTINE` - everything else
 
-- A clear system prompt that defines a multi-step workflow.
-- Tool use for real file I/O.
-- Structured state via dataclasses for inbox responses.
-- Conversation memory with LangGraph checkpointing.
-- A human approval loop before side effects happen.
+It then shows you the triaged inbox and asks if you want it to draft replies. If you say yes, it creates short professional replies with a tone that matches each priority. Finally, it asks for your approval before saving the replies to [`messages/replies.txt`](/home/diwas/code/lang_chain/lang101/messages/replies.txt).
 
-It feels less like a toy chatbot and more like a practical terminal assistant with guardrails.
+It is a small but practical terminal tool that feels like a focused personal assistant with proper guardrails because it always asks before doing anything permanent.
 
-## How It Works
+## What I Learned
 
-When you run the script, the agent immediately receives:
+This project helped me practice several key concepts:
 
-```text
-can you check my inbox
-```
+- Writing a detailed system prompt to guide multi-step behavior
+- Creating and using custom tools for file operations with `read_inbox` and `save_replies`
+- Using `InMemorySaver` plus a fixed `thread_id` to maintain conversation memory across turns
+- Building a human-in-the-loop approval flow before making changes
+- Structuring an agent with clear boundaries between tools, prompt, and memory
+- Managing a predictable workflow inside an LLM agent
 
-From there, the prompt instructs the model to follow this flow:
-
-1. Call `read_inbox()`.
-2. Classify every message as `URGENT`, `IMPORTANT`, or `ROUTINE`.
-3. Show the grouped inbox and ask whether to draft replies.
-4. If approved, draft replies for every message using a tone that matches the priority.
-5. Ask for final approval before saving.
-6. If approved, call `save_replies()` and write the cleaned replies to disk.
-
-The conversation state is preserved in memory through LangGraph's `InMemorySaver`, using the fixed thread ID `inbox-1`.
+Even though the project is small, it forced me to think about how to make an agent reliable and safe, especially when it has the ability to write files.
 
 ## Project Structure
 
 ```text
 .
 ├── agent2.py
-└── messages
+└── messages/
     ├── messages.txt
     └── replies.txt
 ```
 
-## Core Components
+## How It Works
 
-### `SYSTEM_PROMPT`
+The implementation in [`agent2.py`](/home/diwas/code/lang_chain/lang101/agent2.py) follows a simple flow:
 
-The heart of the assistant is a strict workflow prompt that tells the model exactly how to:
+1. On startup, the script automatically asks the agent to check the inbox.
+2. The agent calls `read_inbox()` to load messages from disk.
+3. It classifies each message as `URGENT`, `IMPORTANT`, or `ROUTINE`.
+4. It shows the grouped inbox and asks whether you want draft replies.
+5. If you approve, it generates replies for each message.
+6. It asks for final approval before calling `save_replies()`.
+7. Approved replies are written to `messages/replies.txt`.
 
-- triage the inbox
-- ask for consent before generating replies
-- ask for consent again before saving
-- format final output
+The agent uses LangGraph's in-memory checkpointing so the conversation can keep context while the script is running.
 
-That makes the agent predictable and easy to reason about.
+## How to Run
 
-### `read_inbox()`
-
-Reads the raw inbox from:
-
-[`messages/messages.txt`](/home/diwas/code/lang_chain/lang101/messages/messages.txt)
-
-This is the agent's source of truth for messages.
-
-### `save_replies(replies)`
-
-Writes approved replies to:
-
-[`messages/replies.txt`](/home/diwas/code/lang_chain/lang101/messages/replies.txt)
-
-Before saving, it strips labels like `Reply:` or `Draft:` so the output file only contains clean reply text.
-
-### `Message` and `InboxResponse`
-
-These dataclasses describe the intended response shape:
-
-- each message has a number, content, priority, reason, and draft reply
-- the full inbox response groups messages into urgent, important, and routine buckets
-
-They make the script easier to extend toward stricter structured output later.
-
-### Model Setup
-
-The agent is initialized with:
-
-```python
-model = init_chat_model("claude-sonnet-4-6", temperature=0)
-```
-
-So the current implementation is wired for Claude through LangChain's Anthropic integration, with deterministic behavior favored over creativity.
-
-## Requirements
-
-This repo is currently running with:
-
-- Python `3.14.3`
-- `langchain==1.2.13`
-- `langgraph==1.1.3`
-- `langchain-anthropic==1.4.0`
-
-You will also need an Anthropic API key available to the LangChain Anthropic integration, typically via:
+Make sure you have an Anthropic API key available:
 
 ```bash
-export ANTHROPIC_API_KEY=your_key_here
+export ANTHROPIC_API_KEY=sk-...
 ```
 
-## Run It
+Install the dependencies:
 
-From the project root:
+```bash
+pip install langchain langgraph langchain-anthropic
+```
+
+Run the assistant:
 
 ```bash
 python agent2.py
 ```
 
-On startup, you should see:
+On startup, it will automatically check your inbox and show the triage. Type `exit` or `quit` to stop.
 
-```text
-Inbox Assistant ready.
-```
+## Tech Stack
 
-Then the assistant will automatically triage the inbox before waiting for your next input.
+- Python 3
+- LangChain
+- LangGraph
+- Claude Sonnet via `init_chat_model`
+- `InMemorySaver` for conversation memory
 
-Type `exit` or `quit` to leave the session.
+## Current Limitations
 
-## Example Inbox
+To be honest, there are still a few rough edges:
 
-The sample inbox currently includes messages like:
+- The workflow is mostly controlled by a long system prompt instead of proper structured output or a real LangGraph state graph
+- Classification still relies heavily on keywords in the prompt
+- The script defines dataclasses for structure, but it is not yet enforcing them with `.with_structured_output()`
+- Memory only lasts while the script is running
 
-- `URGENT: The server is down, we need you NOW.`
-- `ASAP: Client meeting moved to 9am tomorrow, confirm attendance.`
-- `Important: Your payment is overdue, account will be suspended in 24 hours.`
-- casual personal check-ins and reminders
+These are exactly the areas I want to improve next.
 
-That mix is useful because it shows the agent handling both operational alerts and everyday messages in one pass.
+## Ideas for Future Improvements
 
-## Example Flow
+- Switch to proper structured output with Pydantic for more reliable triage and drafting
+- Convert this into a real LangGraph workflow with explicit nodes and state
+- Add support for loading emails from Gmail or Outlook
+- Add per-message approval instead of batch approval
+- Persist memory so the conversation survives script restarts
 
-Typical interaction:
+## Final Note
 
-```text
-Agent: [triaged inbox grouped by priority]
-Agent: Would you like me to draft replies? (yes/no)
+This was a fun mini-project to solidify what I learned in the LangChain course. It is not perfect, but it is a solid first step into building agentic applications that actually do something useful instead of just chatting.
 
-You: yes
-
-Agent: [draft replies grouped by priority]
-Agent: Approve and send these replies? (yes/no)
-
-You: yes
-
-Agent: replies.txt saved successfully.
-```
-
-The saved output is ordered exactly as the prompt requires:
-
-1. urgent replies first
-2. important replies second
-3. routine replies last
-
-## What Makes This README-Worthy
-
-`agent2.py` is a nice example of an opinionated agent loop done right:
-
-- narrow scope
-- visible tool boundaries
-- human approval before writes
-- memory across turns
-- simple enough to learn from in one sitting
-
-If you are learning LangChain agents, this is a strong pattern to study because it stays practical without getting bloated.
-
-## Ideas for Next Upgrades
-
-- Load the inbox from email, Slack, or a database instead of a text file.
-- Persist memory so the thread survives process restarts.
-- Enforce structured output with the existing response dataclasses.
-- Add per-message approval instead of batch approval.
-- Support custom priority rules or user-defined labels.
-- Log sent drafts with timestamps and audit history.
-
-## License
-
-No license file is currently included in this repository.
+Feel free to use it as inspiration for your own practice projects.
