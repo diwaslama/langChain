@@ -105,5 +105,3 @@ These are exactly the areas I want to improve next.
 ## Final Note
 
 This was a fun mini-project to solidify what I learned in the LangChain course. It is not perfect, but it is a solid first step into building agentic applications that actually do something useful instead of just chatting.
-
-Feel free to use it as inspiration for your own practice projects.
