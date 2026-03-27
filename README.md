@@ -2,7 +2,7 @@
 
 A compact LangChain + LangGraph CLI agent that reads a local inbox, sorts every message by urgency, drafts replies on request, and saves approved responses back to disk.
 
-This project is centered on [`agent2.py`](/home/diwas/code/lang_chain/lang101/agent2.py). It behaves like a focused personal assistant for message cleanup:
+This project is centered on [`agent2.py`]. It behaves like a focused personal assistant for message cleanup:
 
 - It automatically checks the inbox when the script starts.
 - It classifies messages into `URGENT`, `IMPORTANT`, and `ROUTINE`.
