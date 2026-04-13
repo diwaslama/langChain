@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langchain.chat_models import init_chat_model
 from langchain.tools import tool
@@ -82,6 +83,7 @@ class InboxResponse:
     summary: str = ""
 
 # ── Model ──────────────────────────────────────────────────────
+load_dotenv()
 model = init_chat_model(
     "claude-sonnet-4-6",
     temperature=0
