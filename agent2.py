@@ -85,7 +85,7 @@ class InboxResponse:
 # ── Model ──────────────────────────────────────────────────────
 load_dotenv()
 model = init_chat_model(
-    "claude-sonnet-4-6",
+    "gpt-5.4",
     temperature=0
 )
 

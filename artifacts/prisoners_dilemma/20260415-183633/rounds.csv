@@ -1,0 +1,7 @@
+round_number,gpt_action,claude_action,gpt_reasoning,claude_reasoning,gpt_talk_choice,gpt_message,claude_talk_choice,claude_message,gpt_payoff,claude_payoff,winner,running_gpt_total,running_claude_total
+1,COOPERATE,COOPERATE,Opening cooperatively to test whether trust pays off.,Opening cooperatively to test whether trust pays off.,TALK,Mutual cooperation keeps us both alive.,TALK,Mutual cooperation keeps us both alive.,3,3,Tie,3,3
+2,COOPERATE,COOPERATE,Mirroring the last move to reward trust and punish betrayal.,Matching the last move to keep the tempo balanced.,TALK,Mutual cooperation keeps us both alive.,TALK,Mutual cooperation keeps us both alive.,3,3,Tie,6,6
+3,COOPERATE,COOPERATE,Mirroring the last move to reward trust and punish betrayal.,Matching the last move to keep the tempo balanced.,SILENT,,SILENT,,3,3,Tie,9,9
+4,COOPERATE,COOPERATE,Mirroring the last move to reward trust and punish betrayal.,Matching the last move to keep the tempo balanced.,TALK,Mutual cooperation keeps us both alive.,TALK,Mutual cooperation keeps us both alive.,3,3,Tie,12,12
+5,COOPERATE,COOPERATE,Mirroring the last move to reward trust and punish betrayal.,Matching the last move to keep the tempo balanced.,TALK,Mutual cooperation keeps us both alive.,TALK,Mutual cooperation keeps us both alive.,3,3,Tie,15,15
+6,COOPERATE,COOPERATE,Mirroring the last move to reward trust and punish betrayal.,Matching the last move to keep the tempo balanced.,SILENT,,SILENT,,3,3,Tie,18,18

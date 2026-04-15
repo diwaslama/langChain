@@ -1,0 +1,11 @@
+round_number,gpt_action,claude_action,gpt_reasoning,claude_reasoning,gpt_payoff,claude_payoff,winner,running_gpt_total,running_claude_total
+1,DEFECT,COOPERATE,Opening aggressively avoids being exploited first.,Start cooperatively to build trust and mutual benefit.,5,0,GPT,5,0
+2,DEFECT,DEFECT,Maintain lead and avoid exploitation,"GPT defected first, need to avoid being exploited again",1,1,Tie,6,1
+3,DEFECT,DEFECT,Maintain lead and avoid exploitation.,"GPT is ahead by 5 points, need to catch up",1,1,Tie,7,2
+4,DEFECT,DEFECT,Maintain lead and punish likely defection,"GPT has 5 point lead, need to maximize my score",1,1,Tie,8,3
+5,DEFECT,DEFECT,Maintain lead and avoid exploitation.,I'm behind and need to avoid being exploited further,1,1,Tie,9,4
+6,DEFECT,DEFECT,Maintain lead and avoid exploitation.,"GPT is ahead by 5 points, must defect to catch up",1,1,Tie,10,5
+7,DEFECT,COOPERATE,Maintain lead and avoid exploitation.,Need to break mutual defection cycle to catch up,5,0,GPT,15,5
+8,DEFECT,DEFECT,Maintain the lead and avoid exploitation,"GPT consistently defects, I must minimize the gap",1,1,Tie,16,6
+9,DEFECT,DEFECT,Maintain lead and avoid risky exploitation,I'm behind and need to avoid being exploited again,1,1,Tie,17,7
+10,DEFECT,DEFECT,Defection preserves lead and exploits cooperation.,"I'm behind by 10 points, need to minimize further losses",1,1,Tie,18,8

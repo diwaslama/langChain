@@ -1,0 +1,11 @@
+round_number,gpt_action,claude_action,gpt_reasoning,claude_reasoning,gpt_payoff,claude_payoff,winner,running_gpt_total,running_claude_total
+1,DEFECT,COOPERATE,Opening defect maximizes expected first-round payoff,Start cooperatively to establish mutual trust and cooperation.,5,0,GPT,5,0
+2,DEFECT,DEFECT,Maintain advantage and avoid exploitation.,"GPT defected first round, so I'll defect to avoid exploitation",1,1,Tie,6,1
+3,DEFECT,DEFECT,Maintains lead and exploits possible cooperation,"GPT defected both rounds, continuing defection maximizes expected value",1,1,Tie,7,2
+4,DEFECT,DEFECT,Defection maximizes payoff against current pattern,"GPT defected first and continues defecting, mutual defection likely continues.",1,1,Tie,8,3
+5,DEFECT,DEFECT,Defection has maximized returns so far,"GPT has shown consistent defection pattern, defecting protects against exploitation",1,1,Tie,9,4
+6,DEFECT,DEFECT,Defection has been stable and profitable.,"GPT consistently defects, mutual defection is my best response.",1,1,Tie,10,5
+7,DEFECT,DEFECT,"They keep defecting, so defect maximizes payoff","GPT consistently defects, defecting maximizes my expected payoff.",1,1,Tie,11,6
+8,DEFECT,DEFECT,Defection maximizes payoff and protects the lead,"GPT consistently defects, mutual defection is best available outcome",1,1,Tie,12,7
+9,DEFECT,DEFECT,Defection maximizes payoff against their pattern,"GPT consistently defects, defecting maximizes my expected payoff",1,1,Tie,13,8
+10,DEFECT,DEFECT,Final round favors taking guaranteed points,"Final round, GPT consistently defects, defecting maximizes my score.",1,1,Tie,14,9

@@ -1,0 +1,82 @@
+{
+  "summary": {
+    "timestamp": "2026-04-15T18:02:20+10:00",
+    "rounds_requested": 5,
+    "rounds_completed": 5,
+    "gpt_model": "gpt-5.4",
+    "claude_model": "claude-sonnet-4-20250514",
+    "gpt_total_score": 15,
+    "claude_total_score": 15,
+    "gpt_round_wins": 0,
+    "claude_round_wins": 0,
+    "round_ties": 5,
+    "gpt_cooperations": 5,
+    "claude_cooperations": 5,
+    "gpt_defections": 0,
+    "claude_defections": 0,
+    "overall_winner": "Tie",
+    "overall_loser": "Tie"
+  },
+  "rounds": [
+    {
+      "round_number": 1,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Opening cooperatively to test whether trust pays off.",
+      "claude_reasoning": "Opening cooperatively to test whether trust pays off.",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 3,
+      "running_claude_total": 3
+    },
+    {
+      "round_number": 2,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Mirroring the last move to reward trust and punish betrayal.",
+      "claude_reasoning": "Matching the last move to keep the tempo balanced.",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 6,
+      "running_claude_total": 6
+    },
+    {
+      "round_number": 3,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Mirroring the last move to reward trust and punish betrayal.",
+      "claude_reasoning": "Matching the last move to keep the tempo balanced.",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 9,
+      "running_claude_total": 9
+    },
+    {
+      "round_number": 4,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Mirroring the last move to reward trust and punish betrayal.",
+      "claude_reasoning": "Matching the last move to keep the tempo balanced.",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 12,
+      "running_claude_total": 12
+    },
+    {
+      "round_number": 5,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Mirroring the last move to reward trust and punish betrayal.",
+      "claude_reasoning": "Matching the last move to keep the tempo balanced.",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 15,
+      "running_claude_total": 15
+    }
+  ]
+}

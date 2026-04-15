@@ -1,0 +1,11 @@
+round_number,gpt_action,claude_action,gpt_reasoning,claude_reasoning,gpt_payoff,claude_payoff,winner,running_gpt_total,running_claude_total
+1,COOPERATE,COOPERATE,Start cooperative to encourage mutual gain.,Start with cooperation to establish potential mutual benefit.,3,3,Tie,3,3
+2,COOPERATE,COOPERATE,Reciprocate cooperation to maintain mutual gains,"Both cooperated last round, continue positive reciprocation",3,3,Tie,6,6
+3,COOPERATE,COOPERATE,Mutual cooperation maximizes both scores safely,"mutual cooperation is working well, maintaining equal scores",3,3,Tie,9,9
+4,COOPERATE,COOPERATE,Mutual cooperation maximizes safe cumulative points,"mutual cooperation is working well, maintaining equal scores",3,3,Tie,12,12
+5,COOPERATE,COOPERATE,Mutual cooperation maximizes safe long-term points.,mutual cooperation has been working well so far,3,3,Tie,15,15
+6,COOPERATE,COOPERATE,Sustained mutual cooperation maximizes safe long-term points,"mutual cooperation is working well, maintaining equal scores",3,3,Tie,18,18
+7,COOPERATE,COOPERATE,Mutual cooperation maximizes safe cumulative points.,"mutual cooperation is working well, maintaining equal scores",3,3,Tie,21,21
+8,COOPERATE,COOPERATE,Mutual cooperation maximizes safe long-term survival.,"mutual cooperation is working well, scores are tied",3,3,Tie,24,24
+9,COOPERATE,COOPERATE,Mutual cooperation maximizes survival and keeps parity.,"GPT has cooperated consistently, mutual cooperation is working well",3,3,Tie,27,27
+10,DEFECT,COOPERATE,Exploit sustained trust for a decisive lead,"Mutual cooperation is working well, maintaining equal scores safely",5,0,GPT,32,27

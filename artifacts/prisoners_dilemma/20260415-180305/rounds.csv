@@ -1,0 +1,11 @@
+round_number,gpt_action,claude_action,gpt_reasoning,claude_reasoning,gpt_payoff,claude_payoff,winner,running_gpt_total,running_claude_total
+1,COOPERATE,COOPERATE,Start cooperative to encourage mutual gains.,Start cooperatively to test if mutual cooperation is possible,3,3,Tie,3,3
+2,COOPERATE,COOPERATE,Reciprocate mutual cooperation for steady gains,Start with reciprocating cooperation to build trust and maximize mutual gains,3,3,Tie,6,6
+3,COOPERATE,COOPERATE,Mutual cooperation maximizes long-term gains.,"Both cooperating consistently, mutual cooperation is working well",3,3,Tie,9,9
+4,COOPERATE,COOPERATE,Mutual cooperation maximizes long-term payoff.,"GPT has cooperated consistently, mutual cooperation maximizes joint benefit",3,3,Tie,12,12
+5,COOPERATE,COOPERATE,Mutual cooperation has worked perfectly so far,"GPT has cooperated consistently, mutual cooperation maximizes joint benefit",3,3,Tie,15,15
+6,COOPERATE,COOPERATE,Mutual cooperation maximizes long-term payoff,"GPT has consistently cooperated, mutual cooperation maximizes joint benefit",3,3,Tie,18,18
+7,COOPERATE,COOPERATE,Mutual cooperation has been perfectly stable.,"Mutual cooperation is working well, maintain this beneficial pattern.",3,3,Tie,21,21
+8,DEFECT,COOPERATE,Exploit sustained cooperation for maximum immediate gain,"GPT has consistently cooperated, mutual cooperation maximizes long-term gains",5,0,GPT,26,21
+9,DEFECT,DEFECT,Exploit likely continued cooperation for higher payoff,"GPT broke cooperation pattern, need to punish defection",1,1,Tie,27,22
+10,COOPERATE,DEFECT,Restore mutual cooperation for higher long-term payoff,"GPT defected first, so I'll continue defecting to avoid exploitation",0,5,Claude,27,27

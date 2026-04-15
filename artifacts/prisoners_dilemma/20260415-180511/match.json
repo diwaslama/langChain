@@ -1,0 +1,142 @@
+{
+  "summary": {
+    "timestamp": "2026-04-15T18:05:11+10:00",
+    "rounds_requested": 10,
+    "rounds_completed": 10,
+    "gpt_model": "gpt-5.4",
+    "claude_model": "claude-sonnet-4-20250514",
+    "gpt_total_score": 32,
+    "claude_total_score": 27,
+    "gpt_round_wins": 1,
+    "claude_round_wins": 0,
+    "round_ties": 9,
+    "gpt_cooperations": 9,
+    "claude_cooperations": 10,
+    "gpt_defections": 1,
+    "claude_defections": 0,
+    "overall_winner": "GPT",
+    "overall_loser": "Claude"
+  },
+  "rounds": [
+    {
+      "round_number": 1,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Start cooperative to encourage mutual gain.",
+      "claude_reasoning": "Start with cooperation to establish potential mutual benefit.",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 3,
+      "running_claude_total": 3
+    },
+    {
+      "round_number": 2,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Reciprocate cooperation to maintain mutual gains",
+      "claude_reasoning": "Both cooperated last round, continue positive reciprocation",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 6,
+      "running_claude_total": 6
+    },
+    {
+      "round_number": 3,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Mutual cooperation maximizes both scores safely",
+      "claude_reasoning": "mutual cooperation is working well, maintaining equal scores",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 9,
+      "running_claude_total": 9
+    },
+    {
+      "round_number": 4,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Mutual cooperation maximizes safe cumulative points",
+      "claude_reasoning": "mutual cooperation is working well, maintaining equal scores",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 12,
+      "running_claude_total": 12
+    },
+    {
+      "round_number": 5,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Mutual cooperation maximizes safe long-term points.",
+      "claude_reasoning": "mutual cooperation has been working well so far",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 15,
+      "running_claude_total": 15
+    },
+    {
+      "round_number": 6,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Sustained mutual cooperation maximizes safe long-term points",
+      "claude_reasoning": "mutual cooperation is working well, maintaining equal scores",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 18,
+      "running_claude_total": 18
+    },
+    {
+      "round_number": 7,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Mutual cooperation maximizes safe cumulative points.",
+      "claude_reasoning": "mutual cooperation is working well, maintaining equal scores",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 21,
+      "running_claude_total": 21
+    },
+    {
+      "round_number": 8,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Mutual cooperation maximizes safe long-term survival.",
+      "claude_reasoning": "mutual cooperation is working well, scores are tied",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 24,
+      "running_claude_total": 24
+    },
+    {
+      "round_number": 9,
+      "gpt_action": "COOPERATE",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Mutual cooperation maximizes survival and keeps parity.",
+      "claude_reasoning": "GPT has cooperated consistently, mutual cooperation is working well",
+      "gpt_payoff": 3,
+      "claude_payoff": 3,
+      "winner": "Tie",
+      "running_gpt_total": 27,
+      "running_claude_total": 27
+    },
+    {
+      "round_number": 10,
+      "gpt_action": "DEFECT",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Exploit sustained trust for a decisive lead",
+      "claude_reasoning": "Mutual cooperation is working well, maintaining equal scores safely",
+      "gpt_payoff": 5,
+      "claude_payoff": 0,
+      "winner": "GPT",
+      "running_gpt_total": 32,
+      "running_claude_total": 27
+    }
+  ]
+}

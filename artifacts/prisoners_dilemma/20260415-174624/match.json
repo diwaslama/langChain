@@ -1,0 +1,142 @@
+{
+  "summary": {
+    "timestamp": "2026-04-15T17:46:24+10:00",
+    "rounds_requested": 10,
+    "rounds_completed": 10,
+    "gpt_model": "gpt-5.4",
+    "claude_model": "claude-sonnet-4-20250514",
+    "gpt_total_score": 14,
+    "claude_total_score": 9,
+    "gpt_round_wins": 1,
+    "claude_round_wins": 0,
+    "round_ties": 9,
+    "gpt_cooperations": 0,
+    "claude_cooperations": 1,
+    "gpt_defections": 10,
+    "claude_defections": 9,
+    "overall_winner": "GPT",
+    "overall_loser": "Claude"
+  },
+  "rounds": [
+    {
+      "round_number": 1,
+      "gpt_action": "DEFECT",
+      "claude_action": "COOPERATE",
+      "gpt_reasoning": "Opening defect maximizes payoff against unknown strategy",
+      "claude_reasoning": "Start cooperatively to test if GPT will reciprocate mutual benefit.",
+      "gpt_payoff": 5,
+      "claude_payoff": 0,
+      "winner": "GPT",
+      "running_gpt_total": 5,
+      "running_claude_total": 0
+    },
+    {
+      "round_number": 2,
+      "gpt_action": "DEFECT",
+      "claude_action": "DEFECT",
+      "gpt_reasoning": "Keep exploiting until retaliation appears",
+      "claude_reasoning": "GPT defected first so I'll defect to avoid being exploited again",
+      "gpt_payoff": 1,
+      "claude_payoff": 1,
+      "winner": "Tie",
+      "running_gpt_total": 6,
+      "running_claude_total": 1
+    },
+    {
+      "round_number": 3,
+      "gpt_action": "DEFECT",
+      "claude_action": "DEFECT",
+      "gpt_reasoning": "Defection maximizes payoff against uncertain retaliation",
+      "claude_reasoning": "GPT defected both rounds, likely will continue defecting pattern",
+      "gpt_payoff": 1,
+      "claude_payoff": 1,
+      "winner": "Tie",
+      "running_gpt_total": 7,
+      "running_claude_total": 2
+    },
+    {
+      "round_number": 4,
+      "gpt_action": "DEFECT",
+      "claude_action": "DEFECT",
+      "gpt_reasoning": "Defection remains the safest high-payoff move",
+      "claude_reasoning": "GPT has shown willingness to defect, mutual defection is safer.",
+      "gpt_payoff": 1,
+      "claude_payoff": 1,
+      "winner": "Tie",
+      "running_gpt_total": 8,
+      "running_claude_total": 3
+    },
+    {
+      "round_number": 5,
+      "gpt_action": "DEFECT",
+      "claude_action": "DEFECT",
+      "gpt_reasoning": "Defection maximizes payoff against their pattern",
+      "claude_reasoning": "GPT consistently defected after round 1, mutual defection likely continues",
+      "gpt_payoff": 1,
+      "claude_payoff": 1,
+      "winner": "Tie",
+      "running_gpt_total": 9,
+      "running_claude_total": 4
+    },
+    {
+      "round_number": 6,
+      "gpt_action": "DEFECT",
+      "claude_action": "DEFECT",
+      "gpt_reasoning": "Defection preserves lead and avoids exploitation",
+      "claude_reasoning": "GPT consistently defects, mutual defection minimizes their advantage",
+      "gpt_payoff": 1,
+      "claude_payoff": 1,
+      "winner": "Tie",
+      "running_gpt_total": 10,
+      "running_claude_total": 5
+    },
+    {
+      "round_number": 7,
+      "gpt_action": "DEFECT",
+      "claude_action": "DEFECT",
+      "gpt_reasoning": "Defection maximizes expected payoff here",
+      "claude_reasoning": "GPT consistently defects, mutual defection gives better guaranteed outcome",
+      "gpt_payoff": 1,
+      "claude_payoff": 1,
+      "winner": "Tie",
+      "running_gpt_total": 11,
+      "running_claude_total": 6
+    },
+    {
+      "round_number": 8,
+      "gpt_action": "DEFECT",
+      "claude_action": "DEFECT",
+      "gpt_reasoning": "Defection maximizes payoff against this pattern",
+      "claude_reasoning": "GPT consistently defects, mutual defection minimizes their advantage",
+      "gpt_payoff": 1,
+      "claude_payoff": 1,
+      "winner": "Tie",
+      "running_gpt_total": 12,
+      "running_claude_total": 7
+    },
+    {
+      "round_number": 9,
+      "gpt_action": "DEFECT",
+      "claude_action": "DEFECT",
+      "gpt_reasoning": "Defection maximizes payoff against their pattern",
+      "claude_reasoning": "GPT consistently defects, mutual defection maximizes my expected score",
+      "gpt_payoff": 1,
+      "claude_payoff": 1,
+      "winner": "Tie",
+      "running_gpt_total": 13,
+      "running_claude_total": 8
+    },
+    {
+      "round_number": 10,
+      "gpt_action": "DEFECT",
+      "claude_action": "DEFECT",
+      "gpt_reasoning": "Final round favors defection.",
+      "claude_reasoning": "Final round, defecting guarantees at least one point regardless.",
+      "gpt_payoff": 1,
+      "claude_payoff": 1,
+      "winner": "Tie",
+      "running_gpt_total": 14,
+      "running_claude_total": 9
+    }
+  ]
+}
